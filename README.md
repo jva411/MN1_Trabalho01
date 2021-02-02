@@ -1,5 +1,6 @@
 # Métodos Numéricos I
-Trabalho de métodos numéricos, com o tema blablalba
+Trabalho de métodos numéricos, tema 3.
+
 
 ## Para usar esse sistema, clone o repositório e siga os passos:
 
@@ -7,7 +8,7 @@ Trabalho de métodos numéricos, com o tema blablalba
 - Dê um run no arquivo `Login.java` que está no seguinte caminho: `/src/main/java/view/Login.java`
 - E pronto! 
 
-### Para saber mais informações sobre o sistema acesse o saiba mais.
+### Para saber mais informações sobre o sistema acesse o pdf.
 
 
 **Autores:**
