@@ -7,9 +7,7 @@ Trabalho de métodos numéricos, com o tema blablalba
 - Dê um run no arquivo `Login.java` que está no seguinte caminho: `/src/main/java/view/Login.java`
 - E pronto! 
 
-### Para saber mais informações sobre o sistema....
-
-
+### Para saber mais informações sobre o sistema acesse o saiba mais.
 
 
 **Autores:**
