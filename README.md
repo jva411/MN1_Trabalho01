@@ -12,13 +12,13 @@ Trabalho de métodos numéricos, com o tema blablalba
 
 **Autores:**
 
-Gabriel Passos [Git-Hub](https://github.com/VicMisael)
+Gabriel Passos [Git-Hub](https://github.com/GabrielPassos25)
 
-Gabriel Brilhante [Git-Hub](https://github.com/cinthia3301andrad) 
+Gabriel Brilhante [Git-Hub](https://github.com/brilhante14) 
 
 Laura Petrola [Git-Hub](https://github.com/petrolau)
 
-Carlos Eduardo [Git-Hub](https://github.com/Danielecarn)
+Carlos Eduardo [Git-Hub](https://github.com/Cadusantos27)
 
-João Victor  [Git-Hub](https://github.com/Danielecarn)
+João Victor  [Git-Hub](https://github.com/jva411)
 
