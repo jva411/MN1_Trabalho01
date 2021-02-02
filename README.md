@@ -1,5 +1,26 @@
-"# MN1_Trabalho01" 
+# Métodos Numéricos I
+Trabalho de métodos numéricos, com o tema blablalba
 
-Passo 1: Descubram o tema sozinhos.
+## Para usar esse sistema, clone o repositório e siga os passos:
 
-#Dica: É o tema 3.
+- Compile o arquivo `pom.xml`
+- Dê um run no arquivo `Login.java` que está no seguinte caminho: `/src/main/java/view/Login.java`
+- E pronto! 
+
+### Para saber mais informações sobre o sistema....
+
+
+
+
+**Autores:**
+
+Gabriel Passos [Git-Hub](https://github.com/VicMisael)
+
+Gabriel Brilhante [Git-Hub](https://github.com/cinthia3301andrad) 
+
+Laura Petrola [Git-Hub](https://github.com/petrolau)
+
+Carlos Eduardo [Git-Hub](https://github.com/Danielecarn)
+
+João Victor  [Git-Hub](https://github.com/Danielecarn)
+
