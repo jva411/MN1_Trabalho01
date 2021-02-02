@@ -6,7 +6,7 @@ Trabalho de métodos numéricos, tema 3.
 
 -Para uma melhor compilação, digite o seguinte comando no terminal:
 
-       g++ -Wall -Wextra -pedantic --std=c++17 main.cpp deque.hpp -o main.out
+       g++ -Wall -Wextra -pedantic --std=c++17 Nome_Arquivo.cpp Nome_Arquivos.hpp -o main.out
 
 -Para executar o programa, digite:
 
