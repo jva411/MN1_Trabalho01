@@ -11,6 +11,7 @@ Trabalho de métodos numéricos, com o tema blablalba
 
 
 **Autores:**
+
 Carlos Eduardo [Git-Hub](https://github.com/Cadusantos27)
 
 João Victor  [Git-Hub](https://github.com/jva411)
