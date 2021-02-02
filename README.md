@@ -24,6 +24,3 @@ Gabriel Brilhante [Git-Hub](https://github.com/brilhante14)
 Gabriel Passos [Git-Hub](https://github.com/GabrielPassos25)
 
 Laura Petrola [Git-Hub](https://github.com/petrolau)
-
-
-
