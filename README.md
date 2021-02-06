@@ -4,9 +4,13 @@ Trabalho de métodos numéricos, tema 3.
 
 ## Para usar esse sistema, clone o repositório e siga os passos:
 
-- Compile o arquivo `pom.xml`
-- Dê um run no arquivo `Login.java` que está no seguinte caminho: `/src/main/java/view/Login.java`
-- E pronto! 
+-Para uma melhor compilação, digite o seguinte comando no terminal:
+
+       g++ -Wall -Wextra -pedantic --std=c++17 Nome_Arquivo.cpp Nome_Arquivos.hpp -o main.out
+
+-Para executar o programa, digite:
+
+       ./main.out
 
 ### Para saber mais informações sobre o sistema acesse o pdf.
 
@@ -22,6 +26,3 @@ Gabriel Brilhante [Git-Hub](https://github.com/brilhante14)
 Gabriel Passos [Git-Hub](https://github.com/GabrielPassos25)
 
 Laura Petrola [Git-Hub](https://github.com/petrolau)
-
-
-
