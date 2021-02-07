@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include <math.h>
-#include <array>
 #include "Cabeçalhos/NewtonFL.hpp"
 using namespace std;
 
