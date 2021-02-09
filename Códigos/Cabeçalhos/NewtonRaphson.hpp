@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <math.h>
+#include "FunçõesNewtonRaphson.hpp"
 using std::cout;
 
 float NewtonRaphson(float x0, float epsilon1, float epsilon2, int iterMax){

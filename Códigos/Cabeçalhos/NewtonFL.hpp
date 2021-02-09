@@ -27,6 +27,7 @@ float* NewtonRaphsonFL(int num_lambdas, float* lambda, float* a3, float* a2, flo
             if(abs(FdDx) < lambda[i] && k == 0)
             {
                 cout << "Não foi possível calcular o valor com os dados do caso: " << i << endl;
+                respostas[i] = false;
                 break;
             }
             else if(abs(FdDx) > lambda[i])
@@ -50,7 +51,6 @@ float* NewtonRaphsonFL(int num_lambdas, float* lambda, float* a3, float* a2, flo
             Fd = calcularFuncao(d[i], a3[i], a2[i]);
             k++;
         }
-        //respostas[i] = false; (OBSERVAR COMPORTAMENTO)
     }
     return respostas;
 }
