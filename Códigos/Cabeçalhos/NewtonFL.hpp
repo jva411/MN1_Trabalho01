@@ -4,54 +4,55 @@
 #include "FunçõesNewtonFL.hpp"
 using namespace std;
 
-//Pendências parem serem resolvidas: 
-//1 - Número de lambdas?? Como utilizar isso? (Perguntar pro Bento);
-//2 - Opções de a3 e a2 para cada lambda?? (Perguntar pro Bento);
-//3 - Como calcular iterMax;
+//Método de Newton com adaptações para os casos em que f'(xk) = 0, número máximo de casos de teste = 10 (TENTAR CONTORNAR ISSO);
+float* NewtonRaphsonFL(int num_lambdas, float* lambda, float* a3, float* a2, float* epsilon, float* d, int* iterMax){
+    static float respostas[10];
+    for(int i=0; i<num_lambdas; i++){
+        float Fd = calcularFuncao(d[i], a3[i], a2[i]);
+        if(abs(Fd) < epsilon[i])
+        {
+            respostas[i] = d[i];
+            continue;
+        }
+        int k = 0;
+        float xk, Fxk, FdDx, xw, FL;
+        while(k < iterMax[i])
+        {
+            //Valor inicial de xk, onde k  == 0;
+            if(k == 0)
+            {
+                xk = d[i];
+            }
+            FdDx = derivadaFuncao(d[i], a3[i], a2[i]);
+            if(abs(FdDx) < lambda[i] && k == 0)
+            {
+                cout << "Não foi possível calcular o valor com os dados do caso: " << i << endl;
+                break;
+            }
+            else if(abs(FdDx) > lambda[i])
+            {
+                FL = FdDx;
+                xw = xk;
+            }
+            else
+            {
+                FL = derivadaFuncao(xw, a3[i], a2[i]);
+            }
+            
+            xk = d[i] - Fd/FL;
+            Fxk = calcularFuncao(xk, a3[i], a2[i]);
 
-//Método de Newton com adaptações para os casos em que f'(xk) = 0
-float NewtonRaphsonFL(int num_lambdas, float lambda, float a3, float a2, float epsilon, float d, int iterMax){
-    float Fd = calcularFuncao(d, a3, a2);
-    if(abs(Fd) < epsilon)
-    {
-        return d;
+            if(abs(Fxk) < epsilon[i]){
+                respostas[i] = xk;
+                break;
+            }
+            d[i] = xk;
+            Fd = calcularFuncao(d[i], a3[i], a2[i]);
+            k++;
+        }
+        //respostas[i] = false; (OBSERVAR COMPORTAMENTO)
     }
-    int k = 0;
-    float xk, Fxk, FdDx, xw, FL;
-    
-    while(k < iterMax)
-    {
-        //Valor inicial de xk, onde k  == 0;
-        if(k == 0)
-        {
-            xk = d;
-        }
-        FdDx = derivadaFuncao(d, a3, a2);
-        if(abs(FdDx) < lambda && k == 0)
-        {
-            cout << "Não foi possível calcular o valor." << endl;
-        }
-        else if(abs(FdDx) > lambda)
-        {
-            FL = FdDx;
-            xw = xk;
-        }
-        else
-        {
-            FL = derivadaFuncao(xw, a3, a2);
-        }
-        
-        xk = d - Fd/FL;
-        Fxk = calcularFuncao(xk, a3, a2);
-
-        if(abs(Fxk) < epsilon){
-            return xk;
-        }
-        d = xk;
-        Fd = calcularFuncao(d, a3, a2);
-        k++;
-    }
-    return 0;
+    return respostas;
 }
 
 //Explicação das variáveis
@@ -65,4 +66,4 @@ float NewtonRaphsonFL(int num_lambdas, float lambda, float a3, float a2, float e
 //FL = Função especificada pela questão;
 //iterMax = Número de iteracões máximas;
 //d = Alterar o valor da nova variável;
-
+//respostas = Vetor com todos os valores dos casos de teste;
