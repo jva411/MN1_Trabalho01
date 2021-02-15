@@ -1,6 +1,5 @@
-//Guarda de inclusão
 #include <iostream>
-#include <math.h>
+#include <cmath>
 #include "FunçõesNewtonFL.hpp"
 using namespace std;
 
@@ -65,4 +64,3 @@ float NewtonRaphsonFL(int num_lambdas, float lambda, float a3, float a2, float e
 //FL = Função especificada pela questão;
 //iterMax = Número de iteracões máximas;
 //d = Alterar o valor da nova variável;
-
