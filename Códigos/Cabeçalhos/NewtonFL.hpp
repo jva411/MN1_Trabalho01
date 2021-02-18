@@ -1,7 +1,4 @@
-//Guarda de inclusão
-#include <iostream>
-#include <math.h>
-#include "FunçõesNewtonFL.hpp"
+#include "FunçõesAuxiliares.hpp"
 using namespace std;
 
 //Método de Newton com adaptações para os casos em que f'(xk) = 0, número máximo de casos de teste = 10 (TENTAR CONTORNAR ISSO);
@@ -49,6 +46,8 @@ float* NewtonRaphsonFL(int num_lambdas, float* lambda, float* a3, float* a2, flo
             }
             d[i] = xk;
             Fd = calcularFuncao(d[i], a3[i], a2[i]);
+            //Caso queira visualizar as informações de cada iteração, basta tirar o comentário da linha abaixo
+            //cout << "k: " << k << "\n" << "a3: " << a3[i] << "\n" << "a2: " << a2[i] << "\n" << "d: " << d[i] << "\n" << "xk: " << xk << "\n" << "Fxk: " << Fxk << "\n" << "Fxk: " << Fxk << "\n" << "FdDx: " << FdDx << "\n" << "xw: " << xw << "\n" << "FL: " << FL << "\n";
             k++;
         }
     }

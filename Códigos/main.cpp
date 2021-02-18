@@ -1,7 +1,5 @@
-//Guardas de inclusão
-
 #include <iostream>
-#include <math.h>
+#include <cmath>
 #include "Cabeçalhos/NewtonFL.hpp"
 #include "Cabeçalhos/NewtonRaphson.hpp"
 using namespace std;
