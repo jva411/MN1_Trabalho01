@@ -1,7 +1,6 @@
 #include "FunçõesAuxiliares.hpp"
 using namespace std;
 
-//Método de Newton com adaptações para os casos em que f'(xk) = 0, número máximo de casos de teste = 10 (TENTAR CONTORNAR ISSO);
 float* NewtonRaphsonFL(int num_lambdas, float* lambda, float* a3, float* a2, float* epsilon, float* d, int* iterMax){
     static float respostas[10];
     for(int i=0; i<num_lambdas; i++){
@@ -53,16 +52,3 @@ float* NewtonRaphsonFL(int num_lambdas, float* lambda, float* a3, float* a2, flo
     }
     return respostas;
 }
-
-//Explicação das variáveis
-
-//Fd = Valor assumido por f(d);
-//k = Contador do while;
-//xk = Aproximação nova;
-//Fxk = Valor assumido por f(xk), ou seja, nova aproximação;
-//FdDx = Derivada do valor assumido por f(d);
-//xw = Backup do último valor xk válido;
-//FL = Função especificada pela questão;
-//iterMax = Número de iteracões máximas;
-//d = Alterar o valor da nova variável;
-//respostas = Vetor com todos os valores dos casos de teste;
