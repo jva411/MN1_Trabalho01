@@ -68,6 +68,9 @@ int main()
 			for(int i=1; i<=num_lambdas;i++){
 				cout << "----------------- " << i << "º Caso de Teste -----------------" << endl;
 				cout << "Raiz Aproximada: " << raiz[i-1] << "\n";
+				if(raiz[i -1] > 0.3){
+					cout << "Deslocamento > 0.3 centímetros. Logo o pêndulo romperá!" << endl;
+				}
 			}
 			break;
 		}
