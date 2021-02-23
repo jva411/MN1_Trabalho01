@@ -1,23 +1,15 @@
 using namespace std;
-float NewtonRaphson(float x0, float epsilon1, float epsilon2, int iterMax){
-    float Fx0 = calcularFuncao(x0,0,0);
-    if(abs(Fx0) < epsilon1){
-        return x0;
-    }
-    int k = 0;
-    float x1, Fx1, Fx0Dx;
-    while(k < iterMax){
-        Fx0Dx = derivadaFuncao(x0,0,0);
-        x1 = x0 - Fx0/Fx0Dx;
-        Fx1 = calcularFuncao(x1,0,0);
-        if(abs(Fx1) < epsilon1 || abs(x1-x0) < epsilon2){
-            return x1;
-        }
-        //Caso queira visualizar as informações de cada iteração, basta tirar o comentário da linha abaixo
-        //cout << "k: " << k << "\n" << "x1: " << x1 << "\n" << "Fx1: " << Fx1 << "\n" << "Fx0: " << Fx0 << "\n";
+float NewtonRaphson(float x0, float epsilon1, float epsilon2, int iterMax, float a2, float a3){
+    int k = 1;
+    float x1;
+    while (abs(calcularFuncao(x0,a3,a2)) > epsilon1 && k <= iterMax){
+        x1 = x0 - (calcularFuncao(x0,a3,a2)/derivadaFuncao(x0,a3,a2));
+
+        if(abs(calcularFuncao(x1,a3,a2)) < epsilon1 || abs(x1 - x0) < epsilon2) return x1;
+
         x0 = x1;
-        Fx0 = calcularFuncao(x0,0,0);
-        k++;
+
+        k += 1;
     }
-    return 0;
+    return x0;
 }

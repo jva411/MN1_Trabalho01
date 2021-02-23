@@ -25,7 +25,7 @@ int main()
 		//Algoritmo - NewtonRaphson Original
 		case 1:
 			//Variáveis úteis para o Método NewtonRaphson Original
-			float epsilon, epsilon1, aproximInicial, raizNr;
+			float epsilon, epsilon1, aproximInicial, raizNr, a3, a2;
 			int maxIter;
 			cout << "Digite o valor do erro aproximado (1): ";
             cin >> epsilon;
@@ -35,8 +35,12 @@ int main()
             cin >> aproximInicial;
 			cout << "Digite o valor de iterações máximas: ";
             cin >> maxIter;
+			cout << "Digite o valor de a2: ";
+			cin >> a2;
+			cout << "Digite o valor de a3: ";
+			cin >> a3;
             cout << "\t\t -------------- Algoritmo de Newton-Raphson: --------------\n";
-            raizNr = NewtonRaphson(aproximInicial,epsilon,epsilon1,maxIter);
+            raizNr = NewtonRaphson(aproximInicial,epsilon,epsilon1,maxIter,a2,a3);
             cout << "Raiz Aproximada: " << raizNr << "\n";
             break;
 		
