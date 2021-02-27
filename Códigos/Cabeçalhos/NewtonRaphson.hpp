@@ -1,5 +1,6 @@
 #include<iomanip>
 using namespace std;
+
 float NewtonRaphson(float x0, float epsilon1, float epsilon2, int iterMax, float a2, float a3){
     int k = 1;
     int colWidth=20;

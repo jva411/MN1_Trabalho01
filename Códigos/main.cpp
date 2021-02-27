@@ -39,8 +39,6 @@ int main()
 			cin >> a2;
 			cout << "Digite o valor de a3: ";
 			cin >> a3;
-			cout << "\n";
-            cout << "\t\t\t -------------- Algoritmo de Newton-Raphson: ----------------\n";
             raizNr = NewtonRaphson(aproximInicial,epsilon,epsilon1,maxIter,a2,a3);
 			cout << "\n";
 			cout << "\t\t\t -------------- Resolução Newton-Raphson: ------------------\n";
@@ -60,7 +58,7 @@ int main()
 			cin >> num_lambdas;
 			float a2[num_lambdas], a3[num_lambdas], lambdas[num_lambdas], epsilons[num_lambdas], d[num_lambdas]; int iterMax[num_lambdas];
 			for(int i=1; i<=num_lambdas;i++){
-				cout << "----------------- " << i << "º Iteração -----------------" << endl;
+				cout << "\t\t\t ------------------------ " << i << "º Iteração ------------------------" << endl;
 				cout << "Digite o valor da " << i << "º opção de λ: ";
 				cin >> lambdas[i-1];
 				cout << "Digite o valor de a2 para a " << i << "º opção de λ: ";
@@ -76,7 +74,7 @@ int main()
 			}
 			float* raiz = NewtonRaphsonFL(num_lambdas,lambdas,a3,a2,epsilons,d,iterMax);
 			for(int i=1; i<=num_lambdas;i++){
-				cout << "----------------- " << i << "º Caso de Teste -----------------" << endl;
+				cout << "\t\t\t --------------------- " << i << "º Caso de Teste ----------------------" << endl;
 				cout << "Raiz Aproximada: " << raiz[i-1] << "\n";
 				if(raiz[i -1] > 0.3){
 					cout << "Deslocamento > 0.3 centímetros. Logo o pêndulo romperá!" << endl;
