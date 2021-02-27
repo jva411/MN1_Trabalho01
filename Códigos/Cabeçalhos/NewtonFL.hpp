@@ -10,7 +10,7 @@ float* NewtonRaphsonFL(int num_lambdas, float* lambda, float* a3, float* a2, flo
         //table header 
         cout << setfill('*') << setw(7*colWidth) << "*" << endl;
         cout << setfill(' ') << fixed;
-        cout << setw(1.3*colWidth) << "Iteração" << setw(colWidth/1.4) << "x0" << setw(colWidth) <<  "F(x0)" << setw(colWidth) << "FL" << setw(colWidth) << "x1" << setw(colWidth) << "F(x1)" << endl; 
+        cout << setw(1.3*colWidth) << "Iteração" << setw(colWidth/1.4) << "x(k)" << setw(colWidth) <<  "F(x(k))" << setw(colWidth) << "FL" << setw(colWidth) << "x(k+1)" << setw(colWidth) << "F(x(k+1))" << endl; 
         cout << setfill('*') << setw(7*colWidth) << "*" << endl; 
         cout << setfill(' ') << fixed; 
         float xk = d[i];
