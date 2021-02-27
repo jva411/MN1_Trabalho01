@@ -3,20 +3,20 @@
 #include "Cabeçalhos/NewtonFL.hpp"
 #include "Cabeçalhos/NewtonRaphson.hpp"
 using namespace std;
-
 int main()
 {
 	int decisao;
 	//Inicialização
-	cout << "\t\t -------------- Trabalho 01 - Métodos Numéricos -------------- " << "\n";
-	cout << "\t\t Aluno: Carlos Eduardo \t\t\tMatrícula: 475107 "  << "\n";
-	cout << "\t\t Aluno: Gabriel Passos \t\t\tMatrícula: 470692 "  << "\n";
-	cout << "\t\t Aluno: João Gabriel  \t\t\tMatrícula: 472078 "  << "\n";
-	cout << "\t\t Aluno: João Victor \t\t\tMatrícula: 473977 "  << "\n";
-	cout << "\t\t Aluna: Laura Petrola  \t\t\tMatrícula: 471913 "  << "\n";
-	cout << "\t\t ------------------------------------------------------------- " << "\n";
+	cout << "\t\t\t -------------- Trabalho 01 - Métodos Numéricos -------------- " << "\n";
+	cout << "\t\t\t Aluno: Carlos Eduardo \t\t\tMatrícula: 475107 "  << "\n";
+	cout << "\t\t\t Aluno: Gabriel Passos \t\t\tMatrícula: 470692 "  << "\n";
+	cout << "\t\t\t Aluno: João Gabriel  \t\t\tMatrícula: 472078 "  << "\n";
+	cout << "\t\t\t Aluno: João Victor \t\t\tMatrícula: 473977 "  << "\n";
+	cout << "\t\t\t Aluna: Laura Petrola  \t\t\tMatrícula: 471913 "  << "\n";
+	cout << "\t\t\t ------------------------------------------------------------- " << "\n";
 	
 	//Escolha do método para resolução
+	cout << "\n\t\t\t -------------- Iteração/Coleta de dados - Usuário: ----------\n";
 	cout << "Escolha o método que será utilizado para consultar a raíz do seu problema: " << "\n";
     cout << "1: Método de NewtonRaphson Original" << "\n" << "2: Método de NewtonFL" << "\n";
 	cout << "Número: ";
@@ -39,9 +39,15 @@ int main()
 			cin >> a2;
 			cout << "Digite o valor de a3: ";
 			cin >> a3;
-            cout << "\t\t -------------- Algoritmo de Newton-Raphson: --------------\n";
+			cout << "\n";
+            cout << "\t\t\t -------------- Algoritmo de Newton-Raphson: ----------------\n";
             raizNr = NewtonRaphson(aproximInicial,epsilon,epsilon1,maxIter,a2,a3);
+			cout << "\n";
+			cout << "\t\t\t -------------- Resolução Newton-Raphson: ------------------\n";
             cout << "Raiz Aproximada: " << raizNr << "\n";
+			if(raizNr > 0.3){
+					cout << "Deslocamento > 0.3 centímetros. Logo o pêndulo romperá!" << endl;
+				}
             break;
 		
 		//Algoritmo - Método NewtonFL
